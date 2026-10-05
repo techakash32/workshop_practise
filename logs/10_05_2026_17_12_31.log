@@ -1,0 +1,19 @@
+[2026-10-05 17:12:32,168] 16 __main__ -INFO -TRAINING PIPELINE STARTED....
+[2026-10-05 17:12:32,168] 23 src.components.data_ingestion -INFO -Data Ingestion started....
+[2026-10-05 17:12:32,177] 26 src.components.data_ingestion -INFO -Data read successfullywith shape: (1338, 7)
+[2026-10-05 17:12:32,181] 31 src.components.data_ingestion -INFO -Performing train-test-split
+[2026-10-05 17:12:32,195] 37 src.components.data_ingestion -INFO -Data Ingestion completed successfully...
+[2026-10-05 17:12:32,244] 98 src.components.data_transformation -INFO -Train and test data loaded for transformation
+[2026-10-05 17:12:32,248] 81 src.components.data_transformation -INFO -Preprocessor object created successfully
+[2026-10-05 17:12:32,249] 119 src.components.data_transformation -INFO -Applying preprocessing on train and test data
+[2026-10-05 17:12:32,312] 15 src.utils -INFO -Object saved successfully at : artifacts\preprocessor.pkl
+[2026-10-05 17:12:32,313] 149 src.components.data_transformation -INFO -Preprocessor object saved successfully
+[2026-10-05 17:12:32,313] 33 src.components.model_trainer -INFO -Splitting train and test input data
+[2026-10-05 17:12:32,320] 34 src.utils -INFO -LinearRegression -> Test R2 Score: 0.78
+[2026-10-05 17:12:32,327] 34 src.utils -INFO -DecisionTree -> Test R2 Score: 0.70
+[2026-10-05 17:12:32,664] 34 src.utils -INFO -RandomForest -> Test R2 Score: 0.86
+[2026-10-05 17:12:32,688] 34 src.utils -INFO -KNeighbors -> Test R2 Score: 0.30
+[2026-10-05 17:12:32,688] 76 src.components.model_trainer -INFO -Best Model: RandomForest with R2 Score: 0.8643
+[2026-10-05 17:12:32,710] 15 src.utils -INFO -Object saved successfully at : artifacts\model.pkl
+[2026-10-05 17:12:32,711] 86 src.components.model_trainer -INFO -Best Model saved successfully: RandomForest
+[2026-10-05 17:12:32,713] 45 __main__ -INFO -TRAINING PIPELINE COMPLETED | BEST MODEL: RandomForest, R2 Score: 0.8643
